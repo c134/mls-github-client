@@ -1,0 +1,16 @@
+<article class="view__frame block--shadow">
+    <section class="details">
+        <img class="avatar--full" src="../img/Octocat.png">
+    </section>
+    <ul class="list">
+        <li class="list-item" ng-repeat="user in $ctrl.userList" ng-click="$ctrl.goToDetails(user)">
+            <img class="avatar--preview" ng-src="{{user.data.avatar_url}}">
+            <div class="user-info__preview">
+                <p><strong>{{user.data.login}}</strong></p>
+                <p class="user-info__email">{{user.data.email}}</p>
+            </div>
+        </li>
+    </ul>
+    <pagination-simple-component page-selected="$ctrl.onPageSelected(userList)" first-page="$ctrl.firstUserId"
+                                 next-page="$ctrl.lastUserId"></pagination-simple-component>
+</article>

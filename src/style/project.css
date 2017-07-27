@@ -1,0 +1,443 @@
+header {
+    height: 5em;
+    position: fixed;
+    width: 100%;
+    background-color: #003c8f;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+footer {
+    margin-top: 15%;
+    background-color: #003c8f;
+    height: 5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+body {
+    background-color: #1565c0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.company__logo {
+    margin-left: 5%;
+}
+
+.company__name {
+    display: inline-block;
+    font-size: 2em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    margin-left: 2%;
+}
+
+.company__wrapper {
+    display: flex;
+    margin-left: 25%;
+}
+
+.block--shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.title__page {
+    text-align: center;
+    font-size: 2em;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+.view {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.view__frame {
+    display: flex;
+    margin-top: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 5%;
+    background-color: #ffffff;
+
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    background-color: #5e92f3;
+}
+
+.details__user__description {
+    margin-left: 1.5em;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    flex-direction: column;
+}
+
+.list__pagination {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.list__branches {
+    width: 50%;
+    flex-direction: column;
+    transition: width 3s ease-in-out 5s;
+}
+
+.list__commits {
+    width: 40%;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.list-item {
+    display: flex;
+    width: 50%;
+    align-self: center;
+    justify-content: flex-start;
+    margin-bottom: .3em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
+}
+
+.list-item__pagination {
+    display: flex;
+    width: 2em;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    padding: .6em .6em .6em .6em;
+    margin: 0 .3em 0 .3em;
+}
+
+.list-item__pagination--active {
+    background-color: #5e92f3;
+    color: white;
+}
+
+.list-item__repository {
+    width: 70%;
+    flex-direction: column;
+}
+
+.list-item__branch {
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: default;
+}
+
+.list-item__branch--active {
+    background-color: #5e92f3;
+    color: white;
+}
+
+.list-item__commit {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+
+.message__heading {
+    background-color: #1565c0;
+    color: white;
+}
+
+.commit__message {
+    font-size: .9em;
+    padding-left: .5em;
+    margin: 0 0;
+}
+
+.commit__author {
+    padding-left: .5em;
+    margin-bottom: 0;
+}
+
+.repository__wrapper {
+    display: flex;
+}
+
+.repository__name {
+    margin-left: 1em;
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.repository__name__wrapper {
+    background-color: #1565c0;
+    color: #ffffff;
+}
+
+.repository_description {
+    margin-left: 1em;
+}
+
+.list-item:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.avatar--full {
+    width: 25%;
+    align-self: center;
+}
+
+.avatar--preview {
+    width: 25%;
+    align-self: center;
+    border-radius: 2px;
+}
+
+.button__back {
+    background: url(../public/img/arrow-white.svg) no-repeat center center;
+    margin-left: 5%;
+    width: 5em;
+    height: 1em;
+    cursor: pointer;
+}
+
+.button__back--hide {
+    visibility: hidden;
+}
+
+.button__commits {
+    width: 40%;
+    border: none;
+    background-color: #106cc8;
+    color: white;
+    cursor: pointer;
+}
+
+.button__commits--active {
+    background-color: #5e92f3;
+    color: white;
+}
+
+.button--details {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #106cc8;
+    cursor: pointer;
+    padding: .5em 1em .5em 1em;
+    border: none;
+    border-radius: 2px;
+    margin: 0;
+}
+
+.user-info__preview {
+    margin: 0 0 0 1em;
+}
+
+.user-info__email {
+    font-size: .9em;
+}
+
+.pagination-simple {
+    display: flex;
+    justify-content: center;
+    width: 5%;
+    align-self: center;
+}
+
+.pagination__filler {
+    width: 5%;
+    margin: 0 1em;
+}
+
+.pagination-simple__control {
+    padding: 2em 3em;
+    cursor: pointer;
+}
+
+pagination-simple-component {
+    display: flex;
+    width: 1%;
+    align-self: center;
+}
+
+user-details-component, user-list-component, repository-component {
+    display: flex;
+    width: 75%;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+    opacity: 0;
+    transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1;
+    transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+    opacity: 1;
+    transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+    opacity: 0;
+    transform:translate3d(100px, 0, 0);
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .view {
+        width: 100%;
+    }
+
+    .view-frame {
+        width: 100%;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .list-item {
+        width: 100%;
+    }
+
+    .avatar--preview {
+        width: 20%;
+    }
+
+    .list-item__repository {
+        width: 100%;
+        align-content: flex-start;
+    }
+
+    .repository__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .details {
+        margin-top: 1%;
+    }
+
+    user-details-component, user-list-component, repository-component {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .details {
+        margin-top: 3%;
+    }
+
+    .details__user {
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    .details {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .details {
+        margin-top: 7%;
+    }
+
+    .avatar--full {
+        width: 30%;
+    }
+
+    .company__name {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .view {
+        margin-top: 5em;
+    }
+
+    .view-frame {
+        width: 100%;
+    }
+
+    .avatar--preview {
+        width: 25%;
+    }
+
+    .details {
+        display: none;
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    .list-item {
+        width: 100%;
+    }
+
+    .list-item__repository {
+        width: 100%;
+        align-content: flex-start;
+    }
+
+    .details {
+        margin-top: 13%;
+    }
+
+    user-details-component, user-list-component, repository-component {
+        display: flex;
+        width: 100%;
+    }
+
+
+    .company__wrapper {
+        margin-left: 15%;
+    }
+
+    .company__name {
+        opacity: 0;
+    }
+
+
+
+    footer {
+        margin-top: 0;
+    }
+}

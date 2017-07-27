@@ -1,0 +1,27 @@
+<article class="view__frame block--shadow">
+    <section class="details">
+        <img class="avatar--full" ng-src="{{$ctrl.user.avatar_url}}">
+        <div class="details__user__description">
+            <p><strong>{{$ctrl.user.login}}</strong></p>
+            <p>{{$ctrl.user.name}}</p>
+            <p>{{$ctrl.user.email}}</p>
+        </div>
+    </section>
+    <div class="repository__wrapper">
+        <ul class="list list__branches">
+            <li class="list-item list-item__branch block--shadow" ng-repeat="branch in $ctrl.branches">
+                <p class="repository_description">{{branch.name | limitTo : 20}}</p>
+                <button class="button__commits"
+                        ng-class="{'button__commits--active' : $ctrl.selectedBranch.name === branch.name}"
+                        ng-click="$ctrl.getCommits(branch)">Commits
+                </button>
+            </li>
+        </ul>
+        <ul class="list list__commits">
+            <li class="list-item list-item__commit" ng-repeat="commit in $ctrl.commits">
+                <p class="commit__author">{{'Author: '+ commit.author.login}}</p>
+                <p class="commit__message message__heading">{{commit.commit.message}}</p>
+            </li>
+        </ul>
+    </div>
+</article>

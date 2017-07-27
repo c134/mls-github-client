@@ -1,0 +1,19 @@
+<article class="view__frame block--shadow">
+    <section class="details details__user">
+        <img class="avatar--full" ng-src="{{$ctrl.user.avatar_url}}">
+        <div class="details__user__description">
+            <p><strong>{{$ctrl.user.login}}</strong></p>
+            <p>{{$ctrl.user.name}}</p>
+            <p>{{$ctrl.user.email}}</p>
+        </div>
+    </section>
+    <ul class="list">
+        <li class="list-item  list-item__repository block--shadow" ng-repeat="repo in $ctrl.repos" ng-click="$ctrl.goToRepository(repo)">
+            <div class="repository__name__wrapper">
+                <p class="repository__name">{{repo.name}}</p>
+            </div>
+            <p class="repository_description">{{repo.description}}</p>
+        </li>
+    </ul>
+    <pagination-component page="1" pages-total="$ctrl.lastPage" page-selected="$ctrl.onPageSelected(page)"></pagination-component>
+</article>

@@ -1,0 +1,13 @@
+<ul class="list list__pagination">
+    <li class="list-item list-item__pagination block--shadow" ng-click="$ctrl.toFirstPage()"><<</li>
+    <li class="list-item list-item__pagination block--shadow" ng-click="$ctrl.previousPage()"><</li>
+    <li class="list-item list-item__pagination block--shadow" ng-if="$ctrl.showOffsetItemLeft()" ng-click="$ctrl.changeOffset($ctrl.selectedOffsetIndex - 1)">...</li>
+    <li ng-repeat="page in $ctrl.pages|limitTo:5"
+        class="list-item list-item__pagination block--shadow"
+        ng-click="$ctrl.selectPage(page)"
+        ng-class="{'list-item__pagination--active': page === $ctrl.currentPage}">{{page}}
+    </li>
+    <li class="list-item list-item__pagination block--shadow" ng-if="$ctrl.showOffsetItemRight()" ng-click="$ctrl.changeOffset($ctrl.selectedOffsetIndex + 1)">...</li>
+    <li class="list-item list-item__pagination block--shadow" ng-click="$ctrl.nextPage()">></li>
+    <li class="list-item list-item__pagination block--shadow" ng-click="$ctrl.toLastPage()">>></li>
+</ul>
